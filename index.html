@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    
+  </head>
+  <body>
+    <div class="yourName">
+      <h2>Enter your name</h2>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <h1>Hello <span ng-if="yourName"> {{yourName}}!</span> <span ng-if="!yourName"> _____</span> how are you today?
+      
+      </h1>
+      
+    </div>
+    <div class="multiplier">
+      <h2>Multiplier Exercise</h2>
+      <input type="number" ng-model="quantity" placeholder="Quantity" />
+      <input type="number" ng-model="cost" placeholder="Cost" />
+      <h2> {{quantity * cost}}</h2>
+      
+      <hr>
+    </div>
+    <div class="madlibs">
+      <h2>MadLibs Exercise</h2>
+    <input type="text" ng-model="Noun" placeholder="Enter a noun">
+    <input type="text" ng-model="Adjective" placeholder="Enter an adjective">
+    <input type="number" ng-model="Age" placeholder="Age">
+    <h1> My friend <span ng-if="Noun">{{Noun}}</span><span ng-if="!Noun">____</span> is 
+     <span ng-if="Adjective">{{Adjective}}</span><span ng-if="!Adjective">____</span>. In 10 years, {{Noun}} will be <span ng-if="Age">{{Age + 10}}</span> <span ng-if="!Age">_____</span>.
+  It is {{ Adjective==="nice" || Adjective==="funny" }} that your friend is a nice or funny person.</h1>
+
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  </body>
+</html>
